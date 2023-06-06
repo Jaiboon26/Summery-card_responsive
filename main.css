@@ -1,0 +1,235 @@
+@import url('https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@500;700;800&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Hanken Grotesk', sans-serif;
+}
+
+body,html {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    vertical-align: middle;
+    flex-direction: row;
+    flex-direction: column;
+    position: relative;
+}
+
+main {
+    display: flex;
+}
+
+.card-container {
+    display: flex;
+    border-radius: 25px;
+    width: 600px;
+    height: 440px;
+    box-shadow: 0 15px 25px 0 hsl(221, 100%, 96%);
+}
+
+.card-left {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+    border-radius: 25px;
+    background: linear-gradient(hsl(252, 100%, 67%),hsl(241, 81%, 54%));
+    padding: 1rem 2rem;
+    color: #fff;
+    position: relative;
+}
+
+.card-left .card-header h1 {
+    color: hsl(252,100%,85%);
+    font-size: 20px;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+}
+
+.card-left .card-footer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+    gap: 1rem;
+    padding: 1.5rem;
+    font-weight: 700;
+    position: absolute;
+    bottom: 20px;
+    width: 225px;
+}
+
+.card-left .card-footer p {
+    color: hsl(243,100%,82%);
+    font-weight: 500;
+    font-size: 14px;
+}
+
+.card-right {
+    width: 100%;
+    height: 100%;
+    border-radius: 25px;
+    display: flex;
+    flex-direction: column;
+    padding: 1.7rem;
+    gap: 1rem;
+}
+
+.circle-score {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 150px;
+    height: 150px;
+    border-radius: 100%;
+    background: linear-gradient(hsla(256, 72%, 46%, 1), hsla(241, 72%, 46%, 0));
+}
+.circle-score h1 {
+    font-size: 56px;
+    font-weight: 800;
+}
+
+.circle-score p {
+    opacity: .5;
+}
+
+.card-right h1 {
+    margin-bottom: .5rem;
+    font-size: 20px;
+}
+
+.card-summery {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 7px;
+    width: 100%;
+    height: 50px;
+    padding: 1rem;
+}
+
+.card-summery p {
+    display: flex;
+    justify-content: center;
+}
+
+.name-summery {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+.card-summery.red {
+    background: hsla(0, 100%, 67%,.2);
+    color: hsl(0, 100%, 67%);
+}
+.card-summery.yellow {
+    background: hsla(39, 100%, 56%,.2);
+    color: hsl(39, 100%, 56%);
+}
+.card-summery.green {
+    background: hsla(166, 100%, 37%, .2);
+    color: hsl(166, 100%, 37%);
+}
+.card-summery.blue {
+    background: hsla(234, 85%, 45% ,.2);
+    color: hsl(234, 85%, 45%);
+}
+
+.card-summery .score-summery {
+    display: flex;
+}
+.card-summery .score-summery p:first-child {
+    color: #000;
+    font-weight: 800;
+}
+.card-summery .score-summery p:last-child {
+    color: #000;
+    opacity: .5;
+    font-weight: 800;
+}
+
+.btn-con {
+    height: 50px;
+    width: 100%;
+    border: none;
+    border-radius: 25px;
+    color: #fff;
+    background: hsl(224, 30%, 27%);
+    margin-top: 1rem;
+    transition: all .25s ease;
+    cursor: pointer;
+}
+
+@keyframes fade {
+    from {background: hsl(241, 81%, 54%);}
+    to {background: linear-gradient(hsla(256, 72%, 46%, 1) , hsl(241, 81%, 54%));}
+}
+
+.btn-con:hover {
+    animation-name: fade;
+    /* animation-iteration-count: 1; */
+    animation-duration: .5s;
+    animation-play-state: running;
+    background: linear-gradient(hsla(256, 72%, 46%, 1) , hsl(241, 81%, 54%));
+    font-size: 16px;
+}   
+
+footer {
+    position: absolute;
+    bottom: 0;
+}
+
+@media screen and (max-width:600px) {
+    body {
+        display: flex;
+        position: relative;
+    }
+
+    main {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: absolute;
+        top: 0;
+        width: 100%;
+    }
+
+    .card-container {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        height: 100%;
+    }
+
+    .card-container .card-left {
+        border-top-left-radius: 0;
+        border-top-right-radius: 0;
+        height: 400px;
+        min-height: 400px;
+    }
+
+    .card-container .card-right {
+        padding: 1rem 30px;
+    }
+
+    .btn-con {
+        font-size: 16px;
+    }
+
+    footer {
+        opacity: 0;
+    }
+
+    .card-left .card-footer {
+        width: 270px;
+    }
+
+}
