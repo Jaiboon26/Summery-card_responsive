@@ -28,7 +28,7 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
+- Solution URL: [My solution](https://www.frontendmentor.io/solutions/summerycardresponsive-9vXPnZLhMQ)
 - Live Site URL: [See live site](https://jaiboon26.github.io/Summery-card_responsive/)
 
 ## My process
